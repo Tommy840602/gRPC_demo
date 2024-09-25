@@ -18,13 +18,16 @@ person.email = "guozhao.wang@gmail.com"
 # 新增第一筆電話
 phone_number = person.phones.add()
 phone_number.number = "0912-345678"
-phone_number.type = addressbook_pb2.Person.MOBILE
+phone_number.type = addressbook_pb2.Person.PHONE_TYPE_HOME
 
 # 新增第二筆電話
 phone_number = person.phones.add()
 phone_number.number = "06-1234567"
-phone_number.type = addressbook_pb2.Person.WORK
+phone_number.type = addressbook_pb2.Person.PHONE_TYPE_WORK
 
 # 寫入 AddressBook
 with open(my_pb_file, "wb") as f:
   f.write(address_book.SerializeToString())
+
+
+

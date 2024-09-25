@@ -18,9 +18,9 @@ for person in address_book.people:
   print("E-mail address:", person.email)
 
   for phone_number in person.phones:
-    if phone_number.type == addressbook_pb2.Person.MOBILE:
+    if phone_number.type == addressbook_pb2.Person.PHONE_TYPE_MOBILE:
       print("Mobile phone #:", phone_number.number)
-    elif phone_number.type == addressbook_pb2.Person.HOME:
+    elif phone_number.type == addressbook_pb2.Person.PHONE_TYPE_HOME:
       print("Home phone #:", phone_number.number)
-    elif phone_number.type == addressbook_pb2.Person.WORK:
+    elif phone_number.type == addressbook_pb2.Person.PHONE_TYPE_WORK:
       print("Work phone #:", phone_number.number)
